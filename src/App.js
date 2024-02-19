@@ -43,14 +43,10 @@ function App() {
           <ul>
             <li>
               <NavLink activeClassName="activeElementNew" to="/" exact>
-                HomePage
+                Home Page
               </NavLink>
             </li>
-            <li>
-              <NavLink activeClassName="activeElementNew" to="/contact">
-                Contact Page
-              </NavLink>
-            </li>
+          
             <li>
               <NavLink activeClassName="activeElementNew" to="/about">
                 About Page
@@ -60,6 +56,12 @@ function App() {
               <NavLink activeClassName="activeElementNew" to="/users">
                 Users Page
               </NavLink>
+              </li>
+              <li>
+              <NavLink activeClassName="activeElementNew" to="/contact">
+                Contact Page
+              </NavLink>
+          
             </li>
           </ul>
         </nav>

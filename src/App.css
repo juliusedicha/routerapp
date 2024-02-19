@@ -1,0 +1,214 @@
+/* General styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Responsive container */
+  .app {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Light and Dark Mode */
+  .app.light {
+    background: #fff;
+    color: #2a0944;
+    transition: background 0.4s, color 0.4s;
+  }
+  
+  .app.dark {
+    background: #2a0944;
+    color: #fff;
+    transition: background 0.4s, color 0.4s;
+  }
+  
+  .app a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.4s;
+  }
+  
+  /* Navigation */
+  nav {
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  nav ul li {
+    margin: 0 5px;
+  }
+  
+  nav ul li a {
+    padding: 10px 16px;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    background-color: #2a0944;
+    color: #fff;
+  }
+  
+  /* User list */
+  .userlist {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .userlist li {
+    margin: 5px 0;
+  }
+  
+  /* Footer */
+  footer {
+    width: 100%;
+    height: 93px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  footer a {
+    font-size: 18px;
+    color: rgb(53, 232, 238);
+    font-weight: 600;
+  }
+  
+  small {
+    font-weight: 600;
+  }
+  
+  label {
+    font-weight: 500;
+    font-size: 18px;
+    text-shadow: 1px 1px 1px #2a0944;
+  }
+  
+  label span {
+    font-size: 15px;
+  }
+  
+  /* Active elements */
+  .activeElement,
+  .activeElementNew {
+    color: #fff !important;
+  }
+  
+  .activeElement {
+    background-color: red !important;
+  }
+  
+  .activeElementNew {
+    background-color: blue !important;
+  }
+  
+  /* Theme Button */
+  #btnTheme {
+    padding: 10px;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .theme-btn-dark {
+    background-color: #2a0944;
+    color: #fff;
+  }
+  
+  .theme-btn-light {
+    background-color: #fff;
+    color: #2a0944;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav ul li {
+      margin: 5px 0;
+    }
+  }
+  
+  /* Image styles */
+  img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #2a0944; /* Add border */
+    border-radius: 15px; /* Add border-radius for rounded corners */
+    display: block;
+    margin: 0 auto; /* Center the image */
+  }
+  
+  /* Text alignment and font styles */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    font-size: 16px; /* Base font size */
+    font-weight: 400; /* Base font weight */
+  }
+  
+  p,
+  label,
+  small,
+  footer a {
+    text-align: justify; /* Align text like justified */
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600; /* Set font weight for headings */
+  }
+  
+  /* Responsive font sizes */
+  @media screen and (max-width: 768px) {
+    body {
+      font-size: 14px; /* Adjust base font size for smaller screens */
+    }
+  
+    h1 {
+      font-size: 28px; /* Adjust heading font size for smaller screens */
+    }
+  
+    h2 {
+      font-size: 24px;
+    }
+  
+    h3 {
+      font-size: 20px;
+    }
+  
+    h4 {
+      font-size: 18px;
+    }
+  
+    h5 {
+      font-size: 16px;
+    }
+  
+    h6 {
+      font-size: 14px;
+    }
+  }
+  
