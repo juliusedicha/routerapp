@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import { NavLink, Route, Routes } from 'react-router-dom';
 
@@ -15,23 +16,33 @@ import Error from "./components/Error/Error";
 
 function App() {
   const { theme, setTheme } = useTheme();
+
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
+
   return (
     <div className={`app ${theme}`}>
-    
-        <div>
-          <a
-          
-            id="btnTheme"
-            className={`float-start theme-btn-${theme}`}
-            onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-          >
-            <FontAwesomeIcon icon={faMoon} />
-          </a>
+      <div>
+        <a
+          id="btnTheme"
+          className={`float-start theme-btn-${theme}`}
+          onClick={toggleTheme}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') {
+              toggleTheme();
+            }
+          }}
+          role="button"
+          tabIndex={0}
+        >
+          <FontAwesomeIcon icon={faMoon} />
+        </a>
 
         <nav>
           <ul>
             <li>
-              <NavLink activeClassName="activeElementNew" to="/">
+              <NavLink activeClassName="activeElementNew" to="/" exact>
                 HomePage
               </NavLink>
             </li>
@@ -51,27 +62,19 @@ function App() {
               </NavLink>
             </li>
           </ul>
-            </nav>
-          </div>
-          
+        </nav>
+      </div>
 
       <Routes>
-        <Route path='/' element={<Homepage />} />
-        <Route path='/contact' element={<Contact />} />
-        
-        <Route path='/about' element={<About />} />
-        <Route path='/users' element={<Users />} />
-        <Route path='/user/:id' element={<User />} />
-        
-        <Route path='/' element={<Error />} />
-      
+        <Route path="/" element={<Homepage />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/users" element={<Users />} />
+        <Route path="/user/:id" element={<User />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </div>
   );
 }
 
 export default App;
-
-
-
-
